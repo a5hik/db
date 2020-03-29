@@ -1,9 +1,7 @@
 # members.py #
 from dataclasses import dataclass
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Date
-
-Base = declarative_base()
+from db.base import Base
 
 
 @dataclass

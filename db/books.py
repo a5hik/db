@@ -1,10 +1,10 @@
 
 # books.py #
 from dataclasses import dataclass
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, Integer, String, Date
+from db.base import Base
+from sqlalchemy.dialects.postgresql import MONEY
 
-Base = declarative_base()
 
 @dataclass
 class Book(Base):
@@ -14,7 +14,8 @@ class Book(Base):
     author = Column(String)
     pages = Column(Integer)
     published = Column(Date)
-    
+    price = Column(MONEY)
+
     def __repr__(self):
         return "<Book(title='{}', author='{}', pages={}, published={})>"\
                 .format(self.title, self.author, self.pages, self.published)

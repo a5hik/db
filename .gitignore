@@ -3,3 +3,4 @@ dist
 build
 db_poc.egg-info
 .idea
+db/__pycache__

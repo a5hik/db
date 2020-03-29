@@ -1,9 +1,10 @@
 from datetime import datetime
 
 from sqlalchemy import create_engine
-from config import DATABASE_URI
-from books import Base, Book
-from members import Base, Member
+from db.config import DATABASE_URI
+from db.books import Book
+from db.members import Member
+from db.base import Base
 from sqlalchemy.orm import sessionmaker
 from contextlib import contextmanager
 import yaml
